@@ -17,7 +17,7 @@ Repositório do grupo para as atividades e projetos desenvolvidos durante o **2�
 
 ## 📁 Estrutura do Repositório
 ```
-📦 1-BIM/
+📦 3-BIM/
 ├── 📂PA - PROGRAMAÇÃO E ALGORITIMOS /
 │   └── ...
 ├── 📂 PW - PROGRAMACAO WEB 1/
