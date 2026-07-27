@@ -1,4 +1,4 @@
-# 📚 Desenvolvimento de Sistemas — 2º Bimestre
+# 📚 Desenvolvimento de Sistemas — 3º Bimestre
 
 Repositório do grupo para as atividades e projetos desenvolvidos durante o **2º Bimestre** da disciplina de Desenvolvimento de Sistemas.
 
@@ -19,8 +19,6 @@ Repositório do grupo para as atividades e projetos desenvolvidos durante o **2�
 ```
 📦 1-BIM/
 ├── 📂PA - PROGRAMAÇÃO E ALGORITIMOS /
-│   ├── LinguagemC --- Daniel-Miguel/
-│   ├── LinguagemC --- Valentino-Caua/
 │   └── ...
 ├── 📂 PW - PROGRAMACAO WEB 1/
 │   ├── Miguel-Daniel/
@@ -44,7 +42,7 @@ Repositório do grupo para as atividades e projetos desenvolvidos durante o **2�
 
 ## 📌 Sobre
 
-Trabalhos desenvolvidos em grupo como parte da grade curricular do curso técnico, abrangendo os conteúdos do segundo bimestre.
+Trabalhos desenvolvidos em grupo como parte da grade curricular do curso técnico, abrangendo os conteúdos do terceiro bimestre.
 
 ---
 
