@@ -1,6 +1,6 @@
 # 📚 Desenvolvimento de Sistemas — 3º Bimestre
 
-Repositório do grupo para as atividades e projetos desenvolvidos durante o **2º Bimestre** da disciplina de Desenvolvimento de Sistemas.
+Repositório do grupo para as atividades e projetos desenvolvidos durante o **3º Bimestre** da disciplina de Desenvolvimento de Sistemas.
 
 ---
 
