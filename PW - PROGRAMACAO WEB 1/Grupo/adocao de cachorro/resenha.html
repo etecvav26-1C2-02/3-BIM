@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Adoção de Cachorros</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="m-0">
+
+
+
+    <div class="min-h-screen w-full bg-[url('./assets/background.jpg')] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center p-6 relative">
+
+        
+
+        <nav class="fixed top-0 w-full bg-[#D3D3D3]/30 backdrop-blur-md z-50">
+
+          <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-center gap-12 sm:gap-24">
+
+            <a class="hover:text-gray-800 font-bold hover:scale-105 transition-all duration-300" href="#intro">
+
+              Quem somos?
+
+            </a>
+
+            <a class="hover:text-gray-800 font-bold hover:scale-105 transition-all duration-300" href="#camera">
+
+              Encontre o seu s2.
+
+            </a>
+
+          </div>
+
+        </nav>
+	
+        <img src="./assets/adotex.png" alt="Logo Adotex" class="mt-7 w-200 h-100 md:h-28 py- z-10 drop-shadow-xl hover:scale-105 transition-transform duration-300" />
+		
+        <div class="flex flex-col md:flex-row gap-6 mt-20 max-w-5xl w-full justify-center items-center md:items-stretch z-10 transition-all duration-500">
+
+            
+
+            <div class="bg-[#000000]/80 backdrop-blur-md p-8 sm:p-10 rounded-3xl shadow-2xl max-w-lg w-full text-center flex flex-col items-center">
+
+                <h1 class="text-3xl font-bold text-[#FFFFFF] mb-2">Conheça nossos amigos!</h1>
+
+                <p class="text-gray-200 mb-2 font-medium text-lg">Deslize para ver quem quer um lar:</p>
+
+                <p class="text-gray-400 text-sm mb-4" id="img-counter">1 / 8</p>
+
+                
+
+                <div class="relative w-full h-96 sm:h-110 bg-gray-200/10 rounded-2xl overflow-hidden mb-6 border border-white/20 shadow-inner group">
+
+                    <img id="carousel-img" class="w-full h-full object-cover transition-opacity duration-300 ease-in-out" src="./assets/img1.jpeg" alt="Cachorrinho para adoção" />
+
+
+
+                    <button id="btn-prev" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-3 rounded-full shadow-md transition hover:scale-110 active:scale-95 cursor-pointer">
+
+                        ❮
+
+                    </button>
+
+
+
+                    <button id="btn-next" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-3 rounded-full shadow-md transition hover:scale-110 active:scale-95 cursor-pointer">
+
+                        ❯
+
+                    </button>
+
+                </div>
+
+
+
+                <button id="btn-adopt"  class="w-full bg-[#00A3E0] hover:bg-[#0082B3] text-white font-bold text-lg py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:scale-105 active:scale-95 cursor-pointer">
+
+                    Quero Adotar Este Pet 
+
+                </button>
+
+            </div>
+
+
+
+            <div id="info-panel" class="hidden bg-[#000000]/80 backdrop-blur-md p-8 sm:p-10 rounded-3xl shadow-2xl max-w-md w-full text-center flex flex-col items-center relative transition-all duration-300 border border-[#00A3E0]/30">
+
+                
+
+                <button id="btn-close" class="absolute top-4 right-5 text-gray-300 transition-all hover:scale-110 transition-duration-500 font-bold text-2xl cursor-pointer transition-colors">
+
+                    <img src="./assets/naogrita.jpg" class="w-20"></img>
+
+                </button>
+
+
+
+                <h2 id="info-name" class="text-3xl font-bold text-[#00A3E0] mb-1">Nome do Pet</h2>
+
+                <span id="info-age" class="bg-white/20 text-white px-4 py-1 rounded-full text-sm font-semibold mb-6 inline-block">Idade</span>
+
+                
+
+                <div class="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-[#00A3E0] shadow-lg">
+
+                    <img id="info-img" class="w-full h-full object-cover" src="" alt="Foto do pet selecionado">
+
+                </div>
+
+                
+
+                <p id="info-desc" class="text-gray-200 text-lg italic leading-relaxed flex-grow">
+
+                    Descrição incrível do doguinho vai aparecer aqui.
+
+                </p>
+
+                
+
+                <button onclick="alert('Adotado!')" class="mt-8 w-full bg-green-500 hover:bg-green-600 text-white font-bold text-lg py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:scale-105 active:scale-95 cursor-pointer">
+
+                    Confirmar Adoção! 
+
+                </button>
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+<style>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Orbitron:wght@400..900&display=swap');
+
+
+
+
+
+body{
+
+    font-family: "Istok Web", sans-serif;
+
+font-optical-sizing: auto;
+
+font-weight: <weight>;
+
+font-style: normal;
+
+}
+
+</style>
+
+
+
+    <script>
+
+        // Banco de dados dos cachorros
+
+        const dogs = [
+
+            { img: './assets/img1.jpeg', name: 'Salsicha', age: '2 anos', desc: 'Energia pura! Se você precisa de alguém para lamber seu rosto logo de manhã e correr pela casa, achou. Profissional em caçar petiscos perdidos.' },
+
+            { img: './assets/img2.jpeg', name: 'Piloto', age: '4 anos', desc: 'O rei do Uber Canino. Gosta de passeios de carro, mas sempre acha que você está indo devagar demais. Late para os motoqueiros.' },
+
+            { img: './assets/img3.jpeg', name: 'Zeca Ukulele', age: '5 anos', desc: 'Músico nas horas vagas, roncador profissional em tempo integral. Só toca MPB (Música para Pets Bacanas) e cobra cachê em sachê.' },
+
+            { img: './assets/img4.jpeg', name: 'Lorde Duque', age: '3 anos', desc: 'Um verdadeiro lorde inglês preso num corpo rebaixado. Gosta de tomar sol na grama e julgar quem passa na rua com o olhar.' },
+
+            { img: './assets/img5.jpeg', name: 'Caramelo', age: '1 ano', desc: 'O clássico brasileiro! Não entende o conceito de "espaço pessoal" e adora uma selfie. Sorriso Colgate e coração de ouro.' },
+
+            { img: './assets/img6.jpeg', name: 'Chucky', age: '4 anos', desc: 'Parece perigoso no Halloween, mas morre de medo do aspirador de pó. Sua maior arma é soltar pum silencioso e sair de fininho.' },
+
+            { img: './assets/img7.jpeg', name: 'Sherlock', age: '6 anos', desc: 'Sabe de todos os seus segredos e te julga em silêncio. Especialista em achar lugares quentes para dormir e fingir que não escutou quando você chama.' },
+
+            { img: './assets/img8.jpeg', name: 'Cãotoru Gojo', age: '3 anos', desc: 'O feiticeiro mais forte do pet shop! Gasta muito com produtos de cabelo e tem uma "Expansão de Domínio" que consiste em ocupar sua cama inteira.' }
+
+        ];
+
+
+
+        let currentIndex = 0;
+
+
+
+        // Elementos do Carrossel
+
+        const carouselImg = document.getElementById('carousel-img');
+
+        const imgCounter = document.getElementById('img-counter');
+
+        const btnPrev = document.getElementById('btn-prev');
+
+        const btnNext = document.getElementById('btn-next');
+
+        const btnAdopt = document.getElementById('btn-adopt');
+
+
+
+        // Elementos do Painel Lateral
+
+        const infoPanel = document.getElementById('info-panel');
+
+        const infoName = document.getElementById('info-name');
+
+        const infoAge = document.getElementById('info-age');
+
+        const infoDesc = document.getElementById('info-desc');
+
+        const infoImg = document.getElementById('info-img');
+
+        const btnClose = document.getElementById('btn-close');
+
+
+
+        // Função para atualizar o carrossel
+
+        function updateCarousel() {
+
+            carouselImg.style.opacity = '0'; // Efeito de transição suave
+
+            
+
+            setTimeout(() => {
+
+                carouselImg.src = dogs[currentIndex].img;
+
+                imgCounter.textContent = `${currentIndex + 1} / ${dogs.length}`;
+
+                carouselImg.style.opacity = '1';
+
+                
+
+                // Se o painel já estiver aberto e o usuário mudar de foto, atualiza o painel também
+
+                if (!infoPanel.classList.contains('hidden')) {
+
+                    fillInfoPanel();
+
+                }
+
+            }, 150); // Delay curto para dar tempo do opacity: 0 funcionar
+
+        }
+
+
+
+        // Navegação
+
+        function nextImage() {
+
+            currentIndex = (currentIndex + 1) % dogs.length;
+
+            updateCarousel();
+
+        }
+
+
+
+        function prevImage() {
+
+            currentIndex = (currentIndex - 1 + dogs.length) % dogs.length;
+
+            updateCarousel();
+
+        }
+
+
+
+        btnNext.addEventListener('click', nextImage);
+
+        btnPrev.addEventListener('click', prevImage);
+
+
+
+        // Função para preencher o painel lateral com os dados do doguinho
+
+        function fillInfoPanel() {
+
+            const currentPet = dogs[currentIndex];
+
+            infoName.textContent = currentPet.name;
+
+            infoAge.textContent = currentPet.age;
+
+            infoDesc.textContent = `"${currentPet.desc}"`;
+
+            infoImg.src = currentPet.img;
+
+        }
+
+
+
+        // Lógica do botão de Adoção (Abrir painel)
+
+        btnAdopt.addEventListener('click', () => {
+
+            fillInfoPanel();
+
+            infoPanel.classList.remove('hidden');
+
+            
+
+            // Rola a tela suavemente para o painel em dispositivos móveis
+
+            if (window.innerWidth < 768) {
+
+                setTimeout(() => {
+
+                    infoPanel.scrollIntoView({ behavior: 'smooth' });
+
+                }, 100);
+
+            }
+
+        });
+
+
+
+        // Lógica de fechar o painel
+
+        btnClose.addEventListener('click', () => {
+
+            infoPanel.classList.add('hidden');
+
+        });
+
+
+
+        // Inicializa o contador na primeira vez
+
+        imgCounter.textContent = `1 / ${dogs.length}`;
+
+
+
+    </script>
+
+</body>
+
+</html> 
+
