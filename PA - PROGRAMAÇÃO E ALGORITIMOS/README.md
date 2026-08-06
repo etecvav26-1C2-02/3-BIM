@@ -19,8 +19,6 @@
 ```
 📦 PA - PROGRAMAÇÃO E ALGORITIMOS/
 ├── 📂PA - PROGRAMAÇÃO E ALGORITIMOS /
-│   ├── LinguagemC --- Daniel-Miguel/
-│   ├── LinguagemC --- Valentino-Caua/
 │   └── ...
 └── README.md
 ```
