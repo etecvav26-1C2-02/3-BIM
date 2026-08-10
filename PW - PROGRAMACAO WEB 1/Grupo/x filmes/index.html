@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cine Vision - Filmes e Séries Online Gratis - Oficial</title>
+  <meta name="description" content="Assista filmes e séries online grátis. Cine Vision - a sua plataforma oficial de streaming.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="evil-eye-bg" class="evil-eye-container" aria-hidden="true"></div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <span class="logo-play">&#9654;</span> X<span class="logo-alt">Filmes</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#inicio" class="nav-link active" data-filter="todos">Início</a>
+        <a href="#catalogo" class="nav-link" data-filter="filme">Filmes</a>
+        <a href="#catalogo" class="nav-link" data-filter="serie">Séries</a>
+      </nav>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Buscar filmes e séries..." aria-label="Buscar">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-content">
+        <span class="hero-badge">Destaque do dia</span>
+        <h1 class="hero-title">Filmes e séries online grátis</h1>
+        <p class="hero-subtitle">Assista aos melhores títulos quando quiser, sem pagar nada.</p>
+        <a href="#catalogo" class="btn btn-primary">Explorar catálogo</a>
+      </div>
+    </section>
+
+    <section class="container catalog" id="catalogo">
+      <div class="catalog-head">
+        <h2 class="section-title" id="sectionTitle">Todos os títulos</h2>
+        <div class="results-count" id="resultsCount"></div>
+      </div>
+      <div class="grid" id="catalogGrid"></div>
+      <div class="empty-state" id="emptyState" hidden>
+        <p>Nenhum título encontrado para "<span id="emptyTerm"></span>".</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#" class="logo">
+        <span class="logo-play">&#9654;</span> X<span class="logo-alt">Filmes</span>
+      </a>
+      <p class="footer-text">Filmes e Séries Online</p>
+      <p class="footer-note">&copy; 2026 X Filmes. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/evilEye.js"></script>
+</body>
+</html>
