@@ -197,7 +197,7 @@ font-style: normal;
 
 
 
-        // Elementos do Carrossel
+        
 
         const carouselImg = document.getElementById('carousel-img');
 
@@ -211,7 +211,7 @@ font-style: normal;
 
 
 
-        // Elementos do Painel Lateral
+       
 
         const infoPanel = document.getElementById('info-panel');
 
@@ -227,11 +227,10 @@ font-style: normal;
 
 
 
-        // Função para atualizar o carrossel
-
+        
         function updateCarousel() {
 
-            carouselImg.style.opacity = '0'; // Efeito de transição suave
+            carouselImg.style.opacity = '0'; 
 
             
 
@@ -245,7 +244,7 @@ font-style: normal;
 
                 
 
-                // Se o painel já estiver aberto e o usuário mudar de foto, atualiza o painel também
+               
 
                 if (!infoPanel.classList.contains('hidden')) {
 
@@ -253,13 +252,13 @@ font-style: normal;
 
                 }
 
-            }, 150); // Delay curto para dar tempo do opacity: 0 funcionar
+            }, 150); 
 
         }
 
 
 
-        // Navegação
+        
 
         function nextImage() {
 
@@ -287,7 +286,7 @@ font-style: normal;
 
 
 
-        // Função para preencher o painel lateral com os dados do doguinho
+        
 
         function fillInfoPanel() {
 
@@ -305,7 +304,7 @@ font-style: normal;
 
 
 
-        // Lógica do botão de Adoção (Abrir painel)
+        
 
         btnAdopt.addEventListener('click', () => {
 
@@ -315,7 +314,7 @@ font-style: normal;
 
             
 
-            // Rola a tela suavemente para o painel em dispositivos móveis
+            
 
             if (window.innerWidth < 768) {
 
@@ -331,7 +330,7 @@ font-style: normal;
 
 
 
-        // Lógica de fechar o painel
+       
 
         btnClose.addEventListener('click', () => {
 
@@ -341,7 +340,7 @@ font-style: normal;
 
 
 
-        // Inicializa o contador na primeira vez
+        
 
         imgCounter.textContent = `1 / ${dogs.length}`;
 

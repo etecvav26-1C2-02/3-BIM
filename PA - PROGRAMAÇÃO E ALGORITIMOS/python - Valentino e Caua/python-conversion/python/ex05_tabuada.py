@@ -14,7 +14,9 @@ while(numero < 1 or numero > 10):
 
 
 while(contador <= 10):
-    print()
+    print(numero + "x " + contador + "= " + numero * contador)
+    contador+=1
+
     
 
 
