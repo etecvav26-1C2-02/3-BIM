@@ -1,5 +1,5 @@
 (function () {
-  'use strict';
+  
 
   const grid = document.getElementById('catalogGrid');
   const sectionTitle = document.getElementById('sectionTitle');
@@ -24,6 +24,12 @@
     return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   }
 
+  function slug(value) {
+    return normalize(value)
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  }
+
   function cardHTML(item, index) {
     const inner = `
         <div class="card-poster">
@@ -36,10 +42,7 @@
           <div class="card-meta">${item.year} &middot; ${item.type === 'filme' ? 'Filme' : 'Série'}</div>
         </div>
     `;
-    if (item.url) {
-      return `<a href="${item.url}" class="card" target="_blank" rel="noopener" style="animation-delay:${(index % 12) * 45}ms">${inner}</a>`;
-    }
-    return `<div class="card" style="animation-delay:${(index % 12) * 45}ms">${inner}</div>`;
+    return `<a href="paginas/${slug(item.title)}.html" class="card" style="animation-delay:${(index % 12) * 45}ms">${inner}</a>`;
   }
 
   function filteredItems() {
