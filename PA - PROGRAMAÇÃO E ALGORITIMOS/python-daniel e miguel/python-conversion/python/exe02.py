@@ -1,6 +1,6 @@
 """
     Auor: Daniel de Sousa Araujo, Miguel marcelo 
-    Data: Junho/2026
+    Data: Agosto/2026
     Descrição: Lê dois números inteiros e informa qual é o maior ou se são iguais.
 """
 
