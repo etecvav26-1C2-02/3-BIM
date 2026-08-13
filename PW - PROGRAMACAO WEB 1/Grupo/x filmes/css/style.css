@@ -430,6 +430,72 @@ main,
   font-size: 1.05rem;
 }
 
+/* ---------- About ---------- */
+.about {
+  padding: 48px 0 72px;
+}
+
+.about-head {
+  margin-bottom: 24px;
+}
+
+.about-head .hero-badge {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.about-text {
+  color: var(--text-dim);
+  font-size: 1.05rem;
+  max-width: 720px;
+  margin-bottom: 36px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.about-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px 24px;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.about-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--gradient);
+  color: #000;
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.about-card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.about-card p {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
 /* ---------- Footer ---------- */
 .footer {
   border-top: 1px solid var(--border);

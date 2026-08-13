@@ -79,10 +79,18 @@
 
   navLinks.forEach(function (link) {
     link.addEventListener('click', function (event) {
-      event.preventDefault();
-      setFilter(link.dataset.filter, link);
       nav.classList.remove('open');
       menuToggle.classList.remove('open');
+
+      if (!link.dataset.filter) {
+        navLinks.forEach(function (l) {
+          l.classList.toggle('active', l === link);
+        });
+        return;
+      }
+
+      event.preventDefault();
+      setFilter(link.dataset.filter, link);
     });
   });
 
