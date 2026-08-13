@@ -8,7 +8,7 @@ fatorial = 1
 
 # Repete enquanto o número for positivo e o contador
 # for menor ou igual ao número informado.
-while (numero > 0 and i <= numero):
+while numero > 0 and i <= numero:
 
     # Multiplica o valor do fatorial pelo contador atual.
     fatorial = fatorial * i
