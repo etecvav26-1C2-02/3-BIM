@@ -43,3 +43,28 @@ SAÍDA (Módulo Relé / Lâmpada)
 
  
 ---
+## Questão 3 — Sensor ou atuador?
+ 
+### Classificação dos componentes
+ 
+| Categoria | Componentes |
+|---|---|
+| *Entrada* (Sensores/Controles) | Sensor de temperatura, sensor de luminosidade, botão |
+| *Processamento* (Cérebro) | ESP32 |
+| *Saída* (Atuadores/Indicadores) | Motor, LED, buzzer |
+ 
+### Por que combinar vários sensores e atuadores?
+ 
+Projetos reais lidam com *múltiplas variáveis do ambiente* e precisam responder de formas diferentes para cada situação.
+ 
+*Exemplo de sistema integrado: Estufa inteligente*
+ 
+- *Sensores (Entrada):*
+  - Sensor de temperatura → mede o calor
+  - Sensor de luminosidade → mede a luz solar
+  - Botão → alterna entre modo manual/automático
+- *Atuadores (Saída):*
+  - *Motor* — se a temperatura subir demais, abre uma janela ou liga um exaustor
+  - *LED* — se estiver escuro, acende iluminação sintética
+  - *Buzzer* — se a água do reservatório acabar, apita para alertar o operador
+---
