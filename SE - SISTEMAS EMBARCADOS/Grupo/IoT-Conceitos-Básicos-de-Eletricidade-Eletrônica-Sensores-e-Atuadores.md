@@ -84,3 +84,21 @@ Automatizações cegas geram desperdício, acidentes ou quebra de equipamentos.
 > *Conclusão:* sistemas automáticos precisam de tratamento de exceções e redundância. Prever cenários de falha evita danos físicos, prejuízos financeiros e desperdício de recursos.
  
 ---
+
+## Questão 5 — Quando um projeto se torna IoT?
+ 
+*Não, apenas o Sistema B é um sistema de Internet das Coisas (IoT).*
+ 
+### Diferenças de arquitetura e conceito
+ 
+*Sistema A — Eletrônica / Automação Local*
+O Arduino lê o sensor e aciona o LED localmente. Os dados nascem e morrem dentro do próprio circuito. Não há conectividade de rede, armazenamento em nuvem nem acesso remoto. É um sistema embarcado isolado.
+ 
+*Sistema B — Internet das Coisas (IoT)*
+O ESP32 coleta os dados e usa a rede Wi-Fi para enviá-los à internet. Isso permite monitoramento à distância, armazenamento de histórico, envio de alertas no celular e integração com outros serviços web.
+ 
+### O que define a IoT
+ 
+> O diferencial da Internet das Coisas não é ter microcontroladores ou sensores, mas sim a *conectividade e a troca de dados em rede*. Para ser IoT, o dispositivo precisa se comunicar com outros sistemas via internet, permitindo controle, análise e monitoramento remoto.
+ 
+---
