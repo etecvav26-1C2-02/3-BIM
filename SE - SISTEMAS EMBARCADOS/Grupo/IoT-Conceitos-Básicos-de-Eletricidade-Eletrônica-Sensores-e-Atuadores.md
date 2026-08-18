@@ -68,3 +68,19 @@ Projetos reais lidam com *múltiplas variáveis do ambiente* e precisam responde
   - *LED* — se estiver escuro, acende iluminação sintética
   - *Buzzer* — se a água do reservatório acabar, apita para alertar o operador
 ---
+## Questão 4 — Automatizar tudo é sempre melhor?
+ 
+*A regra pura não é suficiente.*
+Automatizações cegas geram desperdício, acidentes ou quebra de equipamentos.
+ 
+### Fatores cruciais a considerar
+ 
+- *Defeito no sensor:* se o sensor quebrar e marcar "solo seco" continuamente, a bomba queimará por trabalhar sem parar
+- *Duração e frequência:* a irrigação deve durar apenas o tempo necessário para saturar a terra, e não rodar indefinidamente
+- *Disponibilidade de água:* ligar a bomba sem água no reservatório (trabalho a seco) destrói o motor — é preciso um sensor de nível d'água
+- *Horário:* irrigar sob sol forte de meio-dia evapora a água rapidamente e pode queimar as folhas das plantas; o ideal é irrigar no início da manhã ou fim da tarde
+- *Acionamento manual:* o operador precisa ter a opção de ligar/desligar a bomba para manutenção ou testes
+- *Falha na comunicação:* o sistema deve entrar em estado seguro (desligado) se perder a leitura do sensor
+> *Conclusão:* sistemas automáticos precisam de tratamento de exceções e redundância. Prever cenários de falha evita danos físicos, prejuízos financeiros e desperdício de recursos.
+ 
+---
