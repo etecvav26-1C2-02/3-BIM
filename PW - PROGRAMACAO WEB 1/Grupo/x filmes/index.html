@@ -1,112 +1,160 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>X Filmes - Filmes e Séries Online</title>
-  <meta name="description" content="Assista filmes e séries online grátis. Cine Vision - a sua plataforma oficial de streaming.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X Filmes - Filmes e Séries Online</title>
+    <meta
+      name="description"
+      content="Assista filmes e séries online grátis. Cine Vision - a sua plataforma oficial de streaming."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div
+      id="light-rays-bg"
+      class="light-rays-container"
+      aria-hidden="true"
+    ></div>
 
-  <div id="light-rays-bg" class="light-rays-container" aria-hidden="true"></div>
+    <header class="header">
+      <div class="container header-inner">
+        <a href="#" class="logo">
+          <span class="logo-play">&#9654;</span> X<span class="logo-alt"
+            >Filmes</span
+          >
+        </a>
 
-  <header class="header">
-    <div class="container header-inner">
-      <a href="#" class="logo">
-        <span class="logo-play">&#9654;</span> X<span class="logo-alt">Filmes</span>
-      </a>
+        <nav class="nav" id="nav">
+          <a href="#inicio" class="nav-link active" data-filter="todos"
+            >Início</a
+          >
+          <a href="#catalogo" class="nav-link" data-filter="filme">Filmes</a>
+          <a href="#catalogo" class="nav-link" data-filter="serie">Séries</a>
+          <a href="#sobre" class="nav-link">Sobre</a>
+        </nav>
 
-      <nav class="nav" id="nav">
-        <a href="#inicio" class="nav-link active" data-filter="todos">Início</a>
-        <a href="#catalogo" class="nav-link" data-filter="filme">Filmes</a>
-        <a href="#catalogo" class="nav-link" data-filter="serie">Séries</a>
-        <a href="#sobre" class="nav-link">Sobre</a>
-      </nav>
-
-      <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Buscar filmes e séries..." aria-label="Buscar">
-        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="7"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-      </div>
-
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero" id="inicio">
-      <div class="container hero-content">
-        <span class="hero-badge">Destaque do dia</span>
-        <h1 class="hero-title">Filmes e séries</h1>
-        <p class="hero-subtitle">Assista aos melhores títulos quando quiser.</p>
-        <a href="#catalogo" class="btn btn-primary">Explorar catálogo</a>
-      </div>
-    </section>
-
-    <section class="container catalog" id="catalogo">
-      <div class="catalog-head">
-        <h2 class="section-title" id="sectionTitle">Todos os títulos</h2>
-        <div class="results-count" id="resultsCount"></div>
-      </div>
-      <div class="grid" id="catalogGrid"></div>
-      <div class="empty-state" id="emptyState" hidden>
-        <p>Nenhum título encontrado para "<span id="emptyTerm"></span>".</p>
-      </div>
-    </section>
-
-    <section class="about" id="sobre">
-      <div class="container">
-        <div class="about-head">
-          <span class="hero-badge">Sobre</span>
-          <h2 class="section-title">O que é o X Filmes?</h2>
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Buscar filmes e séries..."
+            aria-label="Buscar"
+          />
+          <svg
+            class="search-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
         </div>
-        <p class="about-text">O X Filmes é a sua plataforma de streaming com filmes e séries para todos os gostos. Aqui você encontra os melhores títulos, avaliações da comunidade e recomendações feitas sob medida para você, em qualquer dispositivo.</p>
-        <div class="about-grid">
-          <article class="about-card">
-            <span class="about-icon">&#9654;</span>
-            <h3>Catálogo completo</h3>
-            <p>Filmes e séries de todos os gêneros, com títulos novos chegando toda semana.</p>
-          </article>
-          <article class="about-card">
-            <span class="about-icon">&#9733;</span>
-            <h3>Avaliações reais</h3>
-            <p>Avalie os títulos e veja as notas e opiniões de quem já assistiu.</p>
-          </article>
-          <article class="about-card">
-            <span class="about-icon">&#8734;</span>
-            <h3>Sem custo</h3>
-            <p>Acesse tudo de graça, quando e onde quiser, sem complicação.</p>
-          </article>
-          <article class="about-card">
-            <span class="about-icon">&#10022;</span>
-            <h3>Sempre atualizado</h3>
-            <p>Lançamentos e novidades em primeiro lugar, do primeiro ao último episódio.</p>
-          </article>
-        </div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    </section>
-  </main>
+    </header>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <a href="#" class="logo">
-        <span class="logo-play">&#9654;</span> X<span class="logo-alt">Filmes</span>
-      </a>
-      <p class="footer-text">Filmes e Séries Online</p>
-      <p class="footer-note">&copy; 2026 X Filmes. Todos os direitos reservados.</p>
-    </div>
-  </footer>
+    <main>
+      <section class="hero" id="inicio">
+        <div class="container hero-content">
+          <span class="hero-badge">Destaque do dia</span>
+          <h1 class="hero-title">Filmes e séries</h1>
+          <p class="hero-subtitle">
+            Assista aos melhores títulos quando quiser.
+          </p>
+          <a href="#catalogo" class="btn btn-primary">Explorar catálogo</a>
+        </div>
+      </section>
 
-  <script src="js/data.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/lightRays.js"></script>
-</body>
+      <section class="container catalog" id="catalogo">
+        <div class="catalog-head">
+          <h2 class="section-title" id="sectionTitle">Todos os títulos</h2>
+          <div class="results-count" id="resultsCount"></div>
+        </div>
+        <div class="grid" id="catalogGrid"></div>
+        <div class="empty-state" id="emptyState" hidden>
+          <p>Nenhum título encontrado para "<span id="emptyTerm"></span>".</p>
+        </div>
+      </section>
+
+      <section class="about" id="sobre">
+        <div class="container">
+          <div class="about-head">
+            <span class="hero-badge">Sobre</span>
+            <h2 class="section-title">O que é o X Filmes?</h2>
+          </div>
+          <p class="about-text">
+            O X Filmes é a sua plataforma de streaming com filmes e séries para
+            todos os gostos. Aqui você encontra os melhores títulos, avaliações
+            da comunidade e recomendações feitas sob medida para você, em
+            qualquer dispositivo.
+          </p>
+          <div class="about-grid">
+            <article class="about-card">
+              <span class="about-icon">&#9654;</span>
+              <h3>Catálogo completo</h3>
+              <p>
+                Filmes e séries de todos os gêneros, com títulos novos chegando
+                toda semana.
+              </p>
+            </article>
+            <article class="about-card">
+              <span class="about-icon">&#9733;</span>
+              <h3>Avaliações reais</h3>
+              <p>
+                Avalie os títulos e veja as notas e opiniões de quem já
+                assistiu.
+              </p>
+            </article>
+            <article class="about-card">
+              <span class="about-icon">&#8734;</span>
+              <h3>Sem custo</h3>
+              <p>
+                Acesse tudo de graça, quando e onde quiser, sem complicação.
+              </p>
+            </article>
+            <article class="about-card">
+              <span class="about-icon">&#10022;</span>
+              <h3>Sempre atualizado</h3>
+              <p>
+                Lançamentos e novidades em primeiro lugar, do primeiro ao último
+                episódio.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a href="#" class="logo">
+          <span class="logo-play">&#9654;</span> X<span class="logo-alt"
+            >Filmes</span
+          >
+        </a>
+        <p class="footer-text">Filmes e Séries Online</p>
+        <p class="footer-note">
+          &copy; 2026 X Filmes. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/lightRays.js"></script>
+  </body>
 </html>
