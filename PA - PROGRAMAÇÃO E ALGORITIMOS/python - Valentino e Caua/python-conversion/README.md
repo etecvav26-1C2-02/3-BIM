@@ -24,4 +24,3 @@ Kael Elodie Whitmore
 
 ## Conversão para Python
 
-Alin
